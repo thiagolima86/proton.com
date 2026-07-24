@@ -63,7 +63,7 @@ Uma página só. Âncoras: `#beneficios`, `#precos`, `#contato`.
 
 ### 0. Nav
 
-- Logo Proton (SVG da marca) à esquerda — tamanho generoso, não só favicon
+- Logo Proton horizontal (`logo-horizontal.svg`: símbolo + nome lado a lado) à esquerda — ~32 px no mobile, ~36 px no desktop; a variante empilhada (`logo.svg`) fica para hero e contextos verticais
 - Links: Benefícios · Preços · (opcional) Entrar no app
 - CTA direito: **Começar agora** → checkout do plano Autônomo (público principal)
 - Mobile: menu hamburger simples; CTA permanece visível na barra
