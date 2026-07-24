@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proton — Prontuário eletrônico para fisioterapeutas</title>
+    <meta
+      name="description"
+      content="Prontuário eletrônico inteligente e gestão para fisioterapeutas. Menos papelada, menos faltas, mais tempo no atendimento."
+    />
+    <link rel="canonical" href="https://proton.com.br/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://proton.com.br/" />
+    <meta property="og:title" content="Proton — Prontuário eletrônico para fisioterapeutas" />
+    <meta
+      property="og:description"
+      content="Prontuário eletrônico inteligente e gestão para fisioterapeutas. Menos papelada, menos faltas, mais tempo no atendimento."
+    />
+    <meta property="og:image" content="https://proton.com.br/assets/img/og-image.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/app.css" />
+  </head>
+  <body class="font-body bg-slate-50 text-slate-800 antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+        <a href="/" class="shrink-0" aria-label="Proton — início">
+          <img src="/assets/img/logo.svg" alt="Proton" width="140" height="36" class="h-9 w-auto" />
+        </a>
+        <nav class="hidden items-center gap-8 text-sm font-semibold text-proton-navy md:flex" aria-label="Principal">
+          <a href="#beneficios" class="hover:text-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint">Benefícios</a>
+          <a href="#precos" class="hover:text-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint">Preços</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a
+            href="#precos"
+            class="inline-flex min-h-11 items-center justify-center rounded-lg bg-proton-navy px-4 text-sm font-semibold text-white transition hover:bg-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+          >
+            Começar agora
+          </a>
+          <button
+            type="button"
+            class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-proton-navy md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+            data-nav-toggle
+            aria-controls="nav-mobile"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="nav-mobile" class="hidden border-t border-slate-200 bg-white px-4 py-3 md:hidden" data-nav-panel>
+        <nav class="flex flex-col gap-1 text-sm font-semibold text-proton-navy" aria-label="Mobile">
+          <a href="#beneficios" class="min-h-11 px-2 py-3">Benefícios</a>
+          <a href="#precos" class="min-h-11 px-2 py-3">Preços</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Esqueleto: conteúdo completo na issue 001 -->
+      <section
+        class="relative flex min-h-[100svh] items-end bg-gradient-to-br from-proton-navy via-slate-700 to-slate-400 pt-16 text-white"
+        aria-labelledby="hero-heading"
+      >
+        <div class="mx-auto w-full max-w-6xl px-4 pb-16 pt-24 sm:px-6 sm:pb-24">
+          <h1 id="hero-heading" class="font-sans text-4xl font-bold tracking-tight sm:text-5xl">
+            Prontuário inteligente para fisioterapeutas
+          </h1>
+          <p class="mt-4 max-w-xl font-body text-lg text-white/90">
+            Menos papelada, menos faltas, mais tempo no atendimento.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#precos"
+              class="inline-flex min-h-11 items-center justify-center rounded-lg bg-white px-5 text-sm font-semibold text-proton-navy transition hover:bg-proton-mint focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+            >
+              Começar agora
+            </a>
+            <a
+              href="#beneficios"
+              class="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/40 px-5 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+            >
+              Ver benefícios
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="dor" class="reveal mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24" aria-labelledby="dor-heading">
+        <h2 id="dor-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">A dor do dia a dia</h2>
+        <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+      </section>
+
+      <section id="beneficios" class="reveal bg-white py-16 sm:py-24" aria-labelledby="beneficios-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="beneficios-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">Benefícios</h2>
+          <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+        </div>
+      </section>
+
+      <section id="produto" class="reveal mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24" aria-labelledby="produto-heading">
+        <h2 id="produto-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">O produto</h2>
+        <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+      </section>
+
+      <section id="precos" class="reveal bg-slate-100 py-16 sm:py-24" aria-labelledby="precos-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="precos-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">Preços</h2>
+          <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+        </div>
+      </section>
+
+      <section id="confianca" class="reveal mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24" aria-labelledby="confianca-heading">
+        <h2 id="confianca-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">Confiança</h2>
+        <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+      </section>
+
+      <section id="contato" class="reveal bg-proton-navy py-16 text-white sm:py-24" aria-labelledby="cta-heading">
+        <div class="mx-auto max-w-6xl px-4 text-center sm:px-6">
+          <h2 id="cta-heading" class="font-sans text-2xl font-bold sm:text-3xl">Pronto para começar?</h2>
+          <p class="mx-auto mt-3 max-w-xl font-body text-white/90">Conteúdo na issue 001.</p>
+          <a
+            href="#precos"
+            class="mt-8 inline-flex min-h-11 items-center justify-center rounded-lg bg-white px-5 text-sm font-semibold text-proton-navy transition hover:bg-proton-mint focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+          >
+            Começar agora
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white py-10">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <img src="/assets/img/logo.svg" alt="Proton" width="120" height="32" class="h-8 w-auto" />
+        <p class="font-body text-sm text-slate-500">© <span id="year"></span> Proton. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+    <script src="/assets/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+---
+description: "Fluxo de trabalho do projeto: commits direto na main e tarefas em issues/ (markdown)"
+alwaysApply: true
+---
+
+# Fluxo de trabalho
+
+- Commits vão **direto na branch `main`** — não crie branches nem pull requests, salvo pedido explícito
+- Tarefas são controladas em `issues/` no próprio repositório (não use GitHub Issues nem chamadas de API):
+  - `issues/to_do/` — pendentes, um arquivo `NNN-titulo-curto.md` por tarefa
+  - `issues/done/` — concluídas; ao finalizar uma tarefa, mova o arquivo com `git mv` no mesmo commit da entrega
+- Formato e convenções das issues: ver `issues/README.md`
