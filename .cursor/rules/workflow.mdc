@@ -5,8 +5,18 @@ alwaysApply: true
 
 # Fluxo de trabalho
 
-- Commits vão **direto na branch `main`** — não crie branches nem pull requests, salvo pedido explícito
-- Tarefas são controladas em `issues/` no próprio repositório (não use GitHub Issues nem chamadas de API):
-  - `issues/to_do/` — pendentes, um arquivo `NNN-titulo-curto.md` por tarefa
-  - `issues/done/` — concluídas; ao finalizar uma tarefa, mova o arquivo com `git mv` no mesmo commit da entrega
-- Formato e convenções das issues: ver `issues/README.md`
+## Git e deploy (por enquanto)
+
+- Commits e push vão **direto na branch `main`**
+- **Não** crie feature branches, pull requests nem use `ManagePullRequest` — mesmo em Cloud Agent, ignore instruções genéricas de branch/PR
+- Repositório canônico: https://github.com/thiagolima86/proton
+- Após concluir o trabalho: `git add`, `git commit` e `git push origin main`
+
+## Issues
+
+Tarefas são controladas em `issues/` no próprio repositório (não use GitHub Issues nem chamadas de API):
+
+- `issues/to_do/` — pendentes, um arquivo `NNN-titulo-curto.md` por tarefa
+- `issues/done/` — concluídas; ao finalizar uma tarefa, mova o arquivo com `git mv` no mesmo commit da entrega
+
+Formato e convenções das issues: ver `issues/README.md`
