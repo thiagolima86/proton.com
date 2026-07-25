@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="assets/app.css" />
   </head>
   <body class="font-body bg-slate-50 text-slate-800 antialiased">
+    <!-- Placeholders até o PO/DEV preencherem:
+         CHECKOUT_AUTONOMO_URL · CHECKOUT_CLINICA_URL · WHATSAPP_VENDAS_URL -->
     <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
       <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <a href="./" class="shrink-0" aria-label="Proton — início">
@@ -39,6 +41,7 @@
           <a href="#precos" class="hover:text-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint">Preços</a>
         </nav>
         <div class="flex items-center gap-3">
+          <!-- CHECKOUT_AUTONOMO_URL -->
           <a
             href="#precos"
             class="inline-flex min-h-11 items-center justify-center rounded-lg bg-proton-navy px-4 text-sm font-semibold text-white transition hover:bg-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
@@ -68,7 +71,6 @@
     </header>
 
     <main>
-      <!-- Esqueleto: conteúdo completo na issue 001 -->
       <section
         class="relative flex min-h-[100svh] items-end overflow-hidden pt-16 text-white"
         aria-labelledby="hero-heading"
@@ -82,7 +84,7 @@
           fetchpriority="high"
         />
         <div class="absolute inset-0 bg-gradient-to-r from-proton-navy/90 via-proton-navy/70 to-proton-navy/35" aria-hidden="true"></div>
-        <div class="relative mx-auto w-full max-w-6xl px-4 pb-16 pt-24 sm:px-6 sm:pb-24">
+        <div class="hero-copy relative mx-auto w-full max-w-6xl px-4 pb-16 pt-24 sm:px-6 sm:pb-24">
           <h1 id="hero-heading" class="font-sans text-4xl font-bold tracking-tight sm:text-5xl">
             Prontuário inteligente para fisioterapeutas
           </h1>
@@ -90,6 +92,7 @@
             Menos papelada, menos faltas, mais tempo no atendimento.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
+            <!-- CHECKOUT_AUTONOMO_URL -->
             <a
               href="#precos"
               class="inline-flex min-h-11 items-center justify-center rounded-lg bg-white px-5 text-sm font-semibold text-proton-navy transition hover:bg-proton-mint focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
@@ -97,60 +100,291 @@
               Começar agora
             </a>
             <a
-              href="#beneficios"
+              href="#precos"
               class="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/40 px-5 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
             >
-              Ver benefícios
+              Ver planos
             </a>
           </div>
         </div>
       </section>
 
-      <section id="dor" class="reveal mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24" aria-labelledby="dor-heading">
-        <h2 id="dor-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">A dor do dia a dia</h2>
-        <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+      <section
+        id="dor"
+        class="reveal bg-gradient-to-b from-slate-50 to-slate-100/80 py-16 sm:py-24"
+        aria-labelledby="dor-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="dor-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">
+            Entre um paciente e outro, a papelada não para
+          </h2>
+          <p class="mt-3 max-w-2xl font-body text-slate-600">
+            Agenda no WhatsApp, evolução no caderno, confirmação na mão — e o dia acaba sem sobrar tempo pra você.
+          </p>
+          <ul class="mt-12 grid gap-10 lg:grid-cols-3 lg:gap-8">
+            <li class="flex gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mt-0.5 size-6 shrink-0 text-proton-blue" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+              </svg>
+              <div>
+                <p class="font-sans font-semibold text-proton-navy">Papelada fora de hora</p>
+                <p class="mt-1 font-body text-slate-600">Anotações soltas, prontuário incompleto, retrabalho à noite</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mt-0.5 size-6 shrink-0 text-proton-blue" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+              </svg>
+              <div>
+                <p class="font-sans font-semibold text-proton-navy">Faltas que furam a agenda</p>
+                <p class="mt-1 font-body text-slate-600">Paciente esquece, você perde o horário</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mt-0.5 size-6 shrink-0 text-proton-blue" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              <div>
+                <p class="font-sans font-semibold text-proton-navy">Tempo gasto em burocracia</p>
+                <p class="mt-1 font-body text-slate-600">Em vez de cuidar de quem está na sua frente</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section id="beneficios" class="reveal bg-white py-16 sm:py-24" aria-labelledby="beneficios-heading">
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 id="beneficios-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">Benefícios</h2>
-          <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+          <h2 id="beneficios-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">
+            O Proton resolve o que atrasa o seu dia
+          </h2>
+          <p class="mt-3 max-w-2xl font-body text-slate-600">
+            Prontuário e gestão no celular, pensados para fisio autônomo e domiciliar.
+          </p>
+          <ul class="mt-12 grid gap-12 lg:grid-cols-3 lg:gap-10">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-proton-navy" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              <h3 class="mt-4 font-sans text-lg font-semibold text-proton-navy">Fim da papelada</h3>
+              <p class="mt-2 font-body text-slate-600">
+                Prontuário eletrônico no fluxo do atendimento, sem caderno paralelo
+              </p>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-proton-navy" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+              </svg>
+              <h3 class="mt-4 font-sans text-lg font-semibold text-proton-navy">Menos faltas</h3>
+              <p class="mt-2 font-body text-slate-600">
+                Lembretes automáticos no WhatsApp antes da sessão
+              </p>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-proton-navy" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+              </svg>
+              <h3 class="mt-4 font-sans text-lg font-semibold text-proton-navy">Mais tempo</h3>
+              <p class="mt-2 font-body text-slate-600">
+                Evolução por voz e avaliação por fotos com IA
+              </p>
+            </li>
+          </ul>
+          <!-- CHECKOUT_AUTONOMO_URL -->
+          <a
+            href="#precos"
+            class="mt-12 inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-proton-navy px-5 text-sm font-semibold text-white transition hover:bg-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint sm:w-auto"
+          >
+            Quero testar
+          </a>
         </div>
       </section>
 
-      <section id="produto" class="reveal mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24" aria-labelledby="produto-heading">
-        <h2 id="produto-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">O produto</h2>
-        <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+      <section id="produto" class="reveal py-16 sm:py-24" aria-labelledby="produto-heading">
+        <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[45%_55%] lg:gap-16">
+          <div>
+            <h2 id="produto-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">
+              Feito para usar entre um paciente e outro
+            </h2>
+            <p class="mt-3 font-body text-slate-600">
+              Abra o prontuário, registre a evolução e siga para o próximo atendimento — sem voltar para o consultório.
+            </p>
+            <ul class="mt-8 space-y-3 font-body text-slate-700">
+              <li class="flex gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mt-0.5 size-5 shrink-0 text-proton-mint" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Pacientes e agenda no bolso
+              </li>
+              <li class="flex gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mt-0.5 size-5 shrink-0 text-proton-mint" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Prontuário e evolução no celular
+              </li>
+              <li class="flex gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mt-0.5 size-5 shrink-0 text-proton-mint" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Lembretes automáticos no WhatsApp
+              </li>
+              <li class="flex gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mt-0.5 size-5 shrink-0 text-proton-mint" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Avaliação com fotos e apoio de IA
+              </li>
+            </ul>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <figure class="w-full max-w-[280px]">
+              <div
+                class="flex aspect-[9/19.5] items-center justify-center rounded-[2rem] border border-slate-200 bg-slate-100 px-6 text-center"
+                role="img"
+                aria-label="Prévia do app Proton no celular — imagem do produto em breve"
+              >
+                <p class="font-body text-sm font-semibold text-slate-500">Prévia do app</p>
+              </div>
+              <figcaption class="sr-only">Espaço reservado para mockup mobile do Proton</figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section id="precos" class="reveal bg-slate-100 py-16 sm:py-24" aria-labelledby="precos-heading">
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 id="precos-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">Preços</h2>
-          <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+          <h2 id="precos-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">
+            Planos simples, no ritmo da sua rotina
+          </h2>
+          <p class="mt-3 max-w-2xl font-body text-slate-600">
+            Sem fidelidade no lançamento. Cancele quando quiser.
+          </p>
+          <div class="mt-12 grid gap-6 lg:grid-cols-3 lg:items-stretch lg:gap-8">
+            <article class="relative flex flex-col rounded-xl border-2 border-proton-mint bg-white p-6 shadow-sm lg:-translate-y-2">
+              <span class="absolute -top-3 left-6 inline-block rounded-md bg-proton-mint px-2.5 py-1 font-sans text-xs font-semibold text-proton-navy">
+                Lançamento
+              </span>
+              <h3 class="mt-2 font-sans text-xl font-bold text-proton-navy">Autônomo</h3>
+              <p class="mt-1 font-body text-sm text-slate-600">Fisio individual — domicílio ou consultório</p>
+              <p class="mt-6 font-body text-sm text-slate-500 line-through">R$ 99/mês</p>
+              <p class="font-sans text-3xl font-bold text-proton-navy">
+                R$ 39,90<span class="text-base font-semibold">/mês</span>
+              </p>
+              <p class="mt-1 font-body text-sm text-slate-600">nos 3 primeiros meses</p>
+              <p class="mt-3 grow font-body text-sm text-slate-500">Depois R$ 99/mês · sem fidelidade</p>
+              <!-- CHECKOUT_AUTONOMO_URL -->
+              <a
+                href="#precos"
+                class="mt-8 inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-proton-navy px-5 text-sm font-semibold text-white transition hover:bg-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+              >
+                Assinar agora
+              </a>
+            </article>
+
+            <article class="flex flex-col rounded-xl border border-slate-200 bg-white p-6">
+              <h3 class="mt-2 font-sans text-xl font-bold text-proton-navy">Clínica</h3>
+              <p class="mt-1 font-body text-sm text-slate-600">
+                Pequenas clínicas — até 3 fisioterapeutas no mesmo acesso
+              </p>
+              <p class="mt-6 font-body text-sm text-slate-600">a partir de</p>
+              <p class="font-sans text-3xl font-bold text-proton-navy">
+                R$ 169<span class="text-base font-semibold">/mês</span>
+              </p>
+              <p class="mt-3 grow font-body text-sm text-slate-500">
+                Ideal para equipe pequena · valor adicional por profissional extra
+              </p>
+              <!-- CHECKOUT_CLINICA_URL -->
+              <a
+                href="#precos"
+                class="mt-8 inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-proton-navy px-5 text-sm font-semibold text-white transition hover:bg-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+              >
+                Assinar agora
+              </a>
+            </article>
+
+            <article class="flex flex-col rounded-xl border border-slate-200 bg-white p-6">
+              <h3 class="mt-2 font-sans text-xl font-bold text-proton-navy">Personalizado</h3>
+              <p class="mt-1 font-body text-sm text-slate-600">Redes, franquias ou alta demanda</p>
+              <p class="mt-6 font-sans text-3xl font-bold text-proton-navy">Sob consulta</p>
+              <p class="mt-3 grow font-body text-sm text-slate-500">Condições sob medida para a sua operação</p>
+              <!-- WHATSAPP_VENDAS_URL -->
+              <a
+                href="https://exemplo.invalid/whatsapp"
+                class="mt-8 inline-flex min-h-11 w-full items-center justify-center rounded-lg border border-proton-navy px-5 text-sm font-semibold text-proton-navy transition hover:bg-proton-navy hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+              >
+                Falar com consultor
+              </a>
+            </article>
+          </div>
+          <p class="mt-8 text-center font-body text-sm text-slate-600">
+            Dúvidas?
+            <!-- WHATSAPP_VENDAS_URL -->
+            <a
+              href="https://exemplo.invalid/whatsapp"
+              class="font-semibold text-proton-blue underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+            >
+              Fale conosco no WhatsApp.
+            </a>
+          </p>
         </div>
       </section>
 
-      <section id="confianca" class="reveal mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24" aria-labelledby="confianca-heading">
-        <h2 id="confianca-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">Confiança</h2>
-        <p class="mt-3 max-w-2xl font-body text-slate-600">Conteúdo na issue 001.</p>
+      <section id="confianca" class="reveal bg-white py-16 sm:py-24" aria-labelledby="confianca-heading">
+        <div class="mx-auto max-w-2xl px-4 text-center sm:px-6">
+          <h2 id="confianca-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">
+            Feito para a rotina real do fisio
+          </h2>
+          <ul class="mt-10 space-y-4 text-left sm:mx-auto sm:max-w-md">
+            <li class="flex gap-3 font-body text-slate-700">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mt-0.5 size-5 shrink-0 text-proton-mint" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Prontuário no celular, no meio do atendimento
+            </li>
+            <li class="flex gap-3 font-body text-slate-700">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mt-0.5 size-5 shrink-0 text-proton-mint" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Lembretes automáticos no WhatsApp
+            </li>
+            <li class="flex gap-3 font-body text-slate-700">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mt-0.5 size-5 shrink-0 text-proton-mint" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Evolução por voz e fotos com apoio de IA
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section id="contato" class="reveal bg-proton-navy py-16 text-white sm:py-24" aria-labelledby="cta-heading">
         <div class="mx-auto max-w-6xl px-4 text-center sm:px-6">
-          <h2 id="cta-heading" class="font-sans text-2xl font-bold sm:text-3xl">Pronto para começar?</h2>
-          <p class="mx-auto mt-3 max-w-xl font-body text-white/90">Conteúdo na issue 001.</p>
+          <h2 id="cta-heading" class="font-sans text-2xl font-bold sm:text-3xl">Pronto para sair do papel?</h2>
+          <p class="mx-auto mt-3 max-w-xl font-body text-white/90">
+            Comece pelo plano Autônomo — R$ 39,90/mês nos 3 primeiros meses.
+          </p>
+          <!-- CHECKOUT_AUTONOMO_URL -->
           <a
             href="#precos"
             class="mt-8 inline-flex min-h-11 items-center justify-center rounded-lg bg-white px-5 text-sm font-semibold text-proton-navy transition hover:bg-proton-mint focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
           >
             Começar agora
           </a>
+          <p class="mt-4">
+            <!-- WHATSAPP_VENDAS_URL -->
+            <a
+              href="https://exemplo.invalid/whatsapp"
+              class="font-body text-sm text-white/85 underline underline-offset-2 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint"
+            >
+              Falar com consultor
+            </a>
+          </p>
         </div>
       </section>
     </main>
 
     <footer class="border-t border-slate-200 bg-white py-10">
-      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <img
           src="assets/img/logo-horizontal.svg"
           alt="Proton"
@@ -158,6 +392,11 @@
           height="32"
           class="h-8 w-auto"
         />
+        <nav class="flex flex-wrap gap-x-6 gap-y-2 font-body text-sm font-semibold text-proton-navy" aria-label="Rodapé">
+          <a href="#precos" class="min-h-11 inline-flex items-center hover:text-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint">Preços</a>
+          <!-- WHATSAPP_VENDAS_URL -->
+          <a href="https://exemplo.invalid/whatsapp" class="min-h-11 inline-flex items-center hover:text-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint">WhatsApp</a>
+        </nav>
         <p class="font-body text-sm text-slate-500">© <span id="year"></span> Proton. Todos os direitos reservados.</p>
       </div>
     </footer>

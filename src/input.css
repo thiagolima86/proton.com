@@ -103,6 +103,22 @@
   --color-proton-mint: #90d8c0;
 }
 
+/* Hero: fade-up ao carregar */
+.hero-copy {
+  animation: hero-fade-up 700ms ease-out both;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Scroll-reveal: estado inicial (JS adiciona .is-visible) */
 .reveal {
   opacity: 0;
@@ -118,6 +134,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-copy {
+    animation: none;
+  }
+
   .reveal {
     opacity: 1;
     transform: none;
