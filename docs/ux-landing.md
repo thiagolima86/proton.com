@@ -83,7 +83,7 @@ Conteúdo permitido (só isto):
 | Apoio (1 frase) | Ex.: “Menos papelada, menos faltas, mais tempo entre um paciente e outro.” |
 | CTA primário | **Começar por R$ 39,90/mês** → checkout Autônomo |
 | CTA secundário | **Ver planos** → `#precos` (ghost/outline) |
-| Visual | Foto/contexto de atendimento ou mockup de celular do app, edge-to-edge |
+| Visual | Foto full-bleed: fisio usando o Proton no celular durante o atendimento (`assets/img/hero-fisio-celular.png`); overlay navy à esquerda para legibilidade do texto |
 
 Oferta de lançamento pode aparecer **só na linha do CTA** (“3 primeiros meses”), não como sticker sobre a imagem.
 
