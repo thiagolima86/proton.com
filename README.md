@@ -55,6 +55,4 @@ Servir a raiz localmente (ex.: `python3 -m http.server 8080`) e abrir `http://lo
 ## Fluxo de trabalho
 
 - **Commits direto na `main`** — sem branches ou pull requests por enquanto
-- **Tarefas em `issues/`** — markdown no próprio repositório (ver [issues/README.md](issues/README.md)):
-  - `issues/to_do/` — pendentes
-  - `issues/done/` — concluídas
+- **Escopo na sessão** — a tarefa é o que está na conversa / prompt do agent; planejamento estável em [`docs/`](docs/)

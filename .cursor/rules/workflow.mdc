@@ -1,5 +1,5 @@
 ---
-description: "Fluxo de trabalho do projeto: commits direto na main e tarefas em issues/ (markdown)"
+description: "Fluxo de trabalho do projeto: commits direto na main; escopo na sessão"
 alwaysApply: true
 ---
 
@@ -12,11 +12,8 @@ alwaysApply: true
 - Repositório canônico: https://github.com/thiagolima86/proton
 - Após concluir o trabalho: `git add`, `git commit` e `git push origin main`
 
-## Issues
+## Tarefas
 
-Tarefas são controladas em `issues/` no próprio repositório (não use GitHub Issues nem chamadas de API):
-
-- `issues/to_do/` — pendentes, um arquivo `NNN-titulo-curto.md` por tarefa
-- `issues/done/` — concluídas; ao finalizar uma tarefa, mova o arquivo com `git mv` no mesmo commit da entrega
-
-Formato e convenções das issues: ver `issues/README.md`
+- O escopo vem da **sessão** (mensagem do usuário / prompt da run) — não há backlog versionado em `issues/` nem GitHub Issues
+- Planejamento estável do produto fica em `docs/` (UX, stack, etc.)
+- Não crie pasta `issues/` nem arquivos de tarefa para commit
