@@ -153,12 +153,24 @@ Sem CTA próprio nesta dobra (o próximo bloco é Preços).
 
 **Job da seção:** decisão de compra. Únicos “cards” permitidos na página.
 
+**Eixo de diferenciação (PO):** o produto core é o mesmo; o que muda é **quantos profissionais atendem**.  
+No app: *usuário* = quem loga; *profissional* = quem atende (fisio/médico). O plano limita **profissional**, não usuário. Não usar “usuários” / “acessos” na copy.
+
 | Elemento | Copy fechada |
 | --- | --- |
 | H2 | “Planos simples, no ritmo da sua rotina” |
-| Apoio | “Sem fidelidade no lançamento. Cancele quando quiser.” |
+| Apoio | “Mesmo Proton. A diferença é quantos profissionais atendem. Sem fidelidade no lançamento — cancele quando quiser.” |
 
 Layout: **1 coluna no mobile** (Autônomo primeiro), **3 colunas no desktop** (`lg`). Cards com borda sutil `slate-200`, padding generoso, raio moderado (`rounded-xl`). Autônomo: borda `proton-mint`, leve elevação (`-translate-y` só em desktop) + badge.
+
+Em cada card, nesta ordem: nome → foco → **linha de profissionais** (semibold) → preço → nota → lista de 3 includes (checks) → CTA.  
+Includes iguais nos três planos (benefício, não feature de TI). A linha de profissionais é o contraste óbvio.
+
+**Includes (iguais nos 3):**
+
+1. Prontuário no celular  
+2. Lembretes automáticos no WhatsApp  
+3. Evolução por voz e fotos com IA  
 
 #### Bloco A — Autônomo / Domiciliar (destaque)
 
@@ -167,6 +179,7 @@ Layout: **1 coluna no mobile** (Autônomo primeiro), **3 colunas no desktop** (`
 | Badge | Lançamento |
 | Nome | Autônomo |
 | Foco | Fisio individual — domicílio ou consultório |
+| Profissionais | **1 profissional** |
 | Preço | ~~R$ 99/mês~~ **R$ 39,90** no primeiro mês |
 | Nota | Depois R$ 99/mês · sem fidelidade |
 | CTA | **Assinar agora** → `CHECKOUT_AUTONOMO_URL` |
@@ -176,9 +189,10 @@ Layout: **1 coluna no mobile** (Autônomo primeiro), **3 colunas no desktop** (`
 | Campo | Conteúdo |
 | --- | --- |
 | Nome | Clínica |
-| Foco | Pequenas clínicas — até 3 fisioterapeutas no mesmo acesso |
+| Foco | Pequenas clínicas com equipe |
+| Profissionais | **Até 3 profissionais** |
 | Preço | A partir de **R$ 169/mês** |
-| Nota | Ideal para equipe pequena · valor adicional por profissional extra |
+| Nota | Valor adicional por profissional acima de 3 |
 | CTA | **Assinar agora** → `CHECKOUT_CLINICA_URL` |
 
 #### Bloco C — Personalizado / Enterprise
@@ -186,8 +200,10 @@ Layout: **1 coluna no mobile** (Autônomo primeiro), **3 colunas no desktop** (`
 | Campo | Conteúdo |
 | --- | --- |
 | Nome | Personalizado |
-| Foco | Redes, franquias ou alta demanda |
+| Foco | Redes, franquias ou 4+ profissionais |
+| Profissionais | **Profissionais sob medida** |
 | Preço | **Sob consulta** |
+| Nota | Condições para a sua operação |
 | CTA | **Falar com consultor** → `WHATSAPP_VENDAS_URL` |
 
 Microcopy sob a grade: “Dúvidas? Fale conosco no WhatsApp.” → mesmo `WHATSAPP_VENDAS_URL`.
