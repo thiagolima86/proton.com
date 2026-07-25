@@ -85,7 +85,7 @@ Conteúdo permitido (só isto):
 | CTA secundário | **Ver planos** → `#precos` (ghost/outline) |
 | Visual | Foto full-bleed: fisio usando o Proton no celular durante o atendimento (`assets/img/hero-fisio-celular.png`); overlay navy à esquerda para legibilidade do texto |
 
-Oferta de lançamento pode aparecer **só na linha do CTA** (“3 primeiros meses”), não como sticker sobre a imagem.
+Oferta de lançamento pode aparecer **só na linha do CTA** (“primeiro mês”), não como sticker sobre a imagem.
 
 ---
 
@@ -167,7 +167,7 @@ Layout: **1 coluna no mobile** (Autônomo primeiro), **3 colunas no desktop** (`
 | Badge | Lançamento |
 | Nome | Autônomo |
 | Foco | Fisio individual — domicílio ou consultório |
-| Preço | ~~R$ 99/mês~~ **R$ 39,90/mês** nos 3 primeiros meses |
+| Preço | ~~R$ 99/mês~~ **R$ 39,90** no primeiro mês |
 | Nota | Depois R$ 99/mês · sem fidelidade |
 | CTA | **Assinar agora** → `CHECKOUT_AUTONOMO_URL` |
 
@@ -219,7 +219,7 @@ Quando houver depoimento real (nome + contexto), substitui este bloco — fora d
 | Elemento | Copy fechada |
 | --- | --- |
 | H2 | “Pronto para sair do papel?” |
-| Apoio | “Comece pelo plano Autônomo — R$ 39,90/mês nos 3 primeiros meses.” |
+| Apoio | “Comece pelo plano Autônomo — R$ 39,90 no primeiro mês.” |
 | CTA primário | **Começar agora** → `CHECKOUT_AUTONOMO_URL` |
 | Link texto | **Falar com consultor** → `WHATSAPP_VENDAS_URL` |
 
