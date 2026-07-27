@@ -136,4 +136,4 @@ proton.com/
 
 ## Futuro (proposta)
 
-- Chat de leads com IA na landing: arquitetura em [`arquitetura-chat-leads.md`](arquitetura-chat-leads.md) (API no Proton + OpenAI; Pages só UI).
+- Chat de leads com IA: [`arquitetura-chat-leads.md`](arquitetura-chat-leads.md) — **Cloudflare Worker** + OpenAI (key marketing); Pages só UI.
