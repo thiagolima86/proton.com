@@ -144,7 +144,7 @@ Layout (mobile-first):
 
 Em `lg`: texto + lista à esquerda (~45%), imagem à direita (~55%). Sem frame decorativo exagerado; a tela do app é a âncora.
 
-**Asset:** `assets/img/produto-app-mobile.webp` (a criar). Até existir, DEV usa slot com proporção ~9:19.5 e fundo `slate-100` + legenda “Prévia do app” — **não** inventar UI fake além de placeholder estrutural.
+**Asset:** `assets/img/produto-app-mobile.webp` — captura real da lista de pacientes (mobile).
 
 Sem CTA próprio nesta dobra (o próximo bloco é Preços).
 
