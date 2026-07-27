@@ -1,44 +1,66 @@
-# Checkout — decisão PO
+# Aquisição e billing — decisão PO
 
-**Provedor fechado: [Asaas](https://www.asaas.com/)**
+Refs app: [#163](https://github.com/thiagolima86/proton/issues/163) (signup/trial) · [#134](https://github.com/thiagolima86/proton/issues/134) (checkout/upgrade no app).
 
-## Por quê
+## Funil (fechado)
 
-- Billing de assinatura na plataforma (Proton só reage a webhook)
-- Menor custo no cartão entre as opções BR avaliadas
-- Sem mensalidade; link/checkout externo encaixa na landing estática
-- Mercado Brasil (público do Proton); cobrança em R$
+```
+Landing → escolhe plano → signup no app (trial 7 dias)
+  → usa o produto
+  → assina dentro do app (Asaas)
+```
 
-Descartados para a v1: Stripe (mais caro no cartão / overkill sem internacional), Efí (empatado no Autônomo, um pouco mais caro na Clínica), Hotmart/Kiwify/Eduzz (comissão alta).
+**Pagamento não cria a conta.** Conta nasce no signup trial; Asaas só cobra/upgrade com `account_id` já existente.
 
-## Modalidade padrão
+## O que sai da vitrine
+
+- CTA / destaque de **“R$ 39,90 no 1º mês”** como caminho de aquisição
+- Links de checkout Asaas (`CHECKOUT_AUTONOMO` / `CHECKOUT_CLINICA`) como forma de criar conta
+
+## O que entra na vitrine
 
 | Item | Decisão |
 | --- | --- |
-| Meio principal | **Cartão de crédito recorrente** (débito automático mensal) |
-| Pix / boleto | Opcional depois; Asaas emite a fatura do ciclo, mas o cliente precisa pagar |
-| Internacional | Fora do escopo v1 (Asaas é BR; cartão estrangeiro exige liberação especial) |
+| Oferta principal | **7 dias grátis** (trial), **sem cartão** na entrada |
+| CTA primário | **Começar grátis** / **Testar 7 dias** → signup no app |
+| Autônomo | `{APP_URL}/cadastro?plan=autonomo` |
+| Clínica | `{APP_URL}/cadastro?plan=clinica` |
+| Personalizado | WhatsApp / sob consulta (sem self-checkout) |
 
-## O que a landing precisa
+Placeholders na landing até o host do app estar no ar:
 
-Dois links de assinatura Asaas (Payment Link / cobrança recorrente):
+| Placeholder | Destino |
+| --- | --- |
+| `APP_SIGNUP_AUTONOMO_URL` | `{APP_URL}/cadastro?plan=autonomo` |
+| `APP_SIGNUP_CLINICA_URL` | `{APP_URL}/cadastro?plan=clinica` |
+| `WHATSAPP_VENDAS_URL` | Consultor / Personalizado |
 
-| Placeholder | Plano | Preço de referência |
+## Preços recorrentes (depois do trial)
+
+Exibidos na seção de preços como valor **após** o período de teste:
+
+| Plano | Depois do trial | Limite |
 | --- | --- | --- |
-| `CHECKOUT_AUTONOMO_URL` | Autônomo | R$ 39,90 no 1º mês → R$ 99/mês |
-| `CHECKOUT_CLINICA_URL` | Clínica | A partir de R$ 169/mês |
+| Autônomo | **R$ 99/mês** | 1 profissional |
+| Clínica | **R$ 169/mês** | até 3 profissionais |
+| Personalizado | Sob consulta | sob medida |
 
-Personalizado continua em `WHATSAPP_VENDAS_URL` (sem checkout self-serve).
+## Regras de copy (trial)
 
-## App Proton (fora deste repo)
+- Dias **1–7** grátis; no **8º** dia o acesso clínico corta se não assinar — **dados não apagam**
+- No trial valem os **limites do plano escolhido** (Clínica = até 3 profissionais)
+- Gancho de aquisição = **trial**, não preço introdutório
+- Evitar “R$ 39,90” na landing como oferta de entrada
 
-- Endpoint de **webhook** Asaas para ativar / renovar / suspender conta
-- Eventos típicos: pagamento confirmado/recebido, vencido, assinatura cancelada
-- Prazo de caixa no cartão: ~D+32 (acesso libera no webhook; dinheiro cai depois)
+## Billing no app (fora deste repo)
 
-## Próximo passo
+- Provedor: **[Asaas](https://www.asaas.com/)** — cartão recorrente
+- Checkout / upgrade parte do **app autenticado** (#134), não da landing
+- Webhook Asaas ativa/renova/suspende billing; **não** provisiona Account
+- Personalizado e contas Admin/seed: sem self-checkout Asaas
 
-1. Abrir conta em https://www.asaas.com/
-2. Criar as 2 assinaturas/links (Autônomo e Clínica), incluindo oferta do 1º mês no Autônomo
-3. Colar as URLs nos `href` da landing (hoje `https://exemplo.invalid/...`)
-4. Configurar webhook no app Rails
+## Próximo passo (landing)
+
+1. Confirmar `APP_URL` de produção do monólito Rails
+2. Colar `APP_SIGNUP_*` e `WHATSAPP_VENDAS_URL` nos `href` (hoje `https://exemplo.invalid/...`)
+3. Manter alinhamento de copy com #163 / #134 no app

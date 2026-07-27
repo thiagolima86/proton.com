@@ -37,7 +37,8 @@ Sem glow, sem pills em excesso, sem cards decorativos.
 
 - Mobile-first; alvos de toque ≥ 44px; contraste WCAG AA
 - Um CTA primário por dobra
-- CTAs apontam para **links externos Asaas** (checkout) ou **WhatsApp** (ver [`checkout.md`](checkout.md))
+- CTAs self-serve apontam para **signup no app** (trial 7 dias) ou **WhatsApp** (Personalizado) — ver [`checkout.md`](checkout.md)
+- Pagamento Asaas acontece **dentro do app**, depois do trial — a landing não cria conta via checkout
 - Tom: profissional, prático, economia de tempo, facilidade no celular
 - Em 5 segundos: o visitante entende que o Proton é prontuário + gestão para fisio
 
@@ -65,7 +66,7 @@ Uma página só. Âncoras: `#beneficios`, `#precos`, `#contato`.
 
 - Logo Proton horizontal (`logo-horizontal.svg`: símbolo + nome lado a lado) à esquerda — ~32 px no mobile, ~36 px no desktop; a variante empilhada (`logo.svg`) fica para hero e contextos verticais
 - Links: Benefícios · Preços · (opcional) Entrar no app
-- CTA direito: **Começar agora** → checkout do plano Autônomo (público principal)
+- CTA direito: **Começar grátis** → signup Autônomo (`APP_SIGNUP_AUTONOMO_URL`)
 - Mobile: menu hamburger simples; CTA permanece visível na barra
 
 ---
@@ -81,11 +82,11 @@ Conteúdo permitido (só isto):
 | Marca | Logo Proton em escala hero (sinal dominante) |
 | H1 | Ex.: “Prontuário e gestão feitos para o fisio no celular” |
 | Apoio (1 frase) | Ex.: “Menos papelada, menos faltas, mais tempo entre um paciente e outro.” |
-| CTA primário | **Começar por R$ 39,90/mês** → checkout Autônomo |
+| CTA primário | **Começar grátis** → signup Autônomo (`APP_SIGNUP_AUTONOMO_URL`) |
 | CTA secundário | **Ver planos** → `#precos` (ghost/outline) |
 | Visual | Foto full-bleed: fisio usando o Proton no celular durante o atendimento (`assets/img/hero-fisio-celular.png`); overlay navy à esquerda para legibilidade do texto |
 
-Oferta de lançamento pode aparecer **só na linha do CTA** (“primeiro mês”), não como sticker sobre a imagem.
+Trial (“7 dias grátis · sem cartão”) pode aparecer **só na linha de apoio do CTA**, não como sticker sobre a imagem.
 
 ---
 
@@ -121,7 +122,7 @@ Layout: H2 + parágrafo (`max-w-2xl`). Abaixo, 3 linhas com ícone Heroicons à 
 
 Layout: fundo branco. 3 blocos **sem card** (sem borda/sombra/fundo de caixa): ícone mint/navy + título + 1 frase. Coluna no mobile; 3 colunas em `lg`. Espaçamento generoso entre pilares.
 
-CTA da dobra (único): **Quero testar** → `CHECKOUT_AUTONOMO_URL` (botão navy, abaixo dos pilares, alinhado à esquerda no desktop / full-width opcional no mobile).
+CTA da dobra (único): **Testar 7 dias** → `APP_SIGNUP_AUTONOMO_URL` (botão navy, abaixo dos pilares, alinhado à esquerda no desktop / full-width opcional no mobile).
 
 ---
 
@@ -159,7 +160,7 @@ No app: *usuário* = quem loga; *profissional* = quem atende (fisio/médico). O 
 | Elemento | Copy fechada |
 | --- | --- |
 | H2 | “Planos simples, no ritmo da sua rotina” |
-| Apoio | “Mesmo Proton. A diferença é quantos profissionais atendem. Sem fidelidade no lançamento — cancele quando quiser.” |
+| Apoio | “Mesmo Proton. A diferença é quantos profissionais atendem. 7 dias grátis para testar — sem cartão na entrada.” |
 
 Layout: **1 coluna no mobile** (Autônomo primeiro), **3 colunas no desktop** (`lg`). Cards com borda sutil `slate-200`, padding generoso, raio moderado (`rounded-xl`). Autônomo: borda `proton-mint`, leve elevação (`-translate-y` só em desktop) + badge.
 
@@ -176,13 +177,13 @@ Includes iguais nos três planos (benefício, não feature de TI). A linha de pr
 
 | Campo | Conteúdo |
 | --- | --- |
-| Badge | Lançamento |
+| Badge | 7 dias grátis |
 | Nome | Autônomo |
 | Foco | Fisio individual — domicílio ou consultório |
 | Profissionais | **1 profissional** |
-| Preço | ~~R$ 99/mês~~ **R$ 39,90** no primeiro mês |
-| Nota | Depois R$ 99/mês · sem fidelidade |
-| CTA | **Assinar agora** → `CHECKOUT_AUTONOMO_URL` |
+| Preço | **R$ 99/mês** |
+| Nota | Depois do trial · sem cartão na entrada · sem fidelidade |
+| CTA | **Começar grátis** → `APP_SIGNUP_AUTONOMO_URL` |
 
 #### Bloco B — Clínica / Equipe
 
@@ -191,9 +192,9 @@ Includes iguais nos três planos (benefício, não feature de TI). A linha de pr
 | Nome | Clínica |
 | Foco | Pequenas clínicas com equipe |
 | Profissionais | **Até 3 profissionais** |
-| Preço | A partir de **R$ 169/mês** |
-| Nota | Valor adicional por profissional acima de 3 |
-| CTA | **Assinar agora** → `CHECKOUT_CLINICA_URL` |
+| Preço | **R$ 169/mês** |
+| Nota | Depois do trial · valor adicional por profissional acima de 3 |
+| CTA | **Começar grátis** → `APP_SIGNUP_CLINICA_URL` |
 
 #### Bloco C — Personalizado / Enterprise
 
@@ -206,7 +207,7 @@ Includes iguais nos três planos (benefício, não feature de TI). A linha de pr
 | Nota | Condições para a sua operação |
 | CTA | **Falar com consultor** → `WHATSAPP_VENDAS_URL` |
 
-Microcopy sob a grade: “Dúvidas? Fale conosco no WhatsApp.” → mesmo `WHATSAPP_VENDAS_URL`.
+Microcopy sob a grade: “No trial valem os limites do plano. No 8º dia o acesso clínico pausa se não assinar — seus dados ficam salvos. Dúvidas? Fale conosco no WhatsApp.” → `WHATSAPP_VENDAS_URL`.
 
 ---
 
@@ -235,8 +236,8 @@ Quando houver depoimento real (nome + contexto), substitui este bloco — fora d
 | Elemento | Copy fechada |
 | --- | --- |
 | H2 | “Pronto para sair do papel?” |
-| Apoio | “Comece pelo plano Autônomo — R$ 39,90 no primeiro mês.” |
-| CTA primário | **Começar agora** → `CHECKOUT_AUTONOMO_URL` |
+| Apoio | “Teste 7 dias grátis no plano Autônomo — sem cartão na entrada.” |
+| CTA primário | **Começar grátis** → `APP_SIGNUP_AUTONOMO_URL` |
 | Link texto | **Falar com consultor** → `WHATSAPP_VENDAS_URL` |
 
 Layout: fundo `proton-navy`, texto branco, conteúdo centralizado, um botão branco + link underline discreto abaixo. Sem formulário.
@@ -257,11 +258,11 @@ Escopo para o DEV nesta sessão / run:
 
 | Inclui | Não inclui |
 | --- | --- |
-| Substituir todos os “Conteúdo na issue 001” pelas copies fechadas acima | URLs reais de checkout/WhatsApp (manter placeholders documentados) |
+| Alinhar copies e CTAs ao funil trial (#163) | URLs reais de app/WhatsApp (manter placeholders documentados) |
 | Layout mobile-first das seções 2–7 + footer links | Foto/mockup final do produto (slot + placeholder ok) |
 | Ícones Heroicons inline nas seções Dor, Benefícios, Confiança | Domínio/CNAME, og-image, analytics |
-| Manter hero atual; alinhar CTA secundário do hero para **Ver planos** → `#precos` | Refatorar nav ou stack |
-| CTAs com `href` placeholder (`#precos` ou `https://exemplo.invalid/...`) + comentário HTML com o nome do placeholder | Depoimento com nome fictício |
+| Hero e preços sem gancho “R$ 39,90”; CTAs → signup do app | Refatorar nav ou stack |
+| CTAs com `href` placeholder (`https://exemplo.invalid/cadastro?plan=…`) + comentário HTML com o nome do placeholder | Depoimento com nome fictício |
 
 **Critérios de aceite (UX):**
 
@@ -278,12 +279,12 @@ Escopo para o DEV nesta sessão / run:
 
 | Prioridade | Rótulo | Destino |
 | --- | --- | --- |
-| Primário | Começar / Assinar agora | Checkout plano Autônomo |
-| Primário (Clínica) | Assinar agora | Checkout plano Clínica |
+| Primário | Começar grátis / Testar 7 dias | Signup Autônomo (`/cadastro?plan=autonomo`) |
+| Primário (Clínica) | Começar grátis | Signup Clínica (`/cadastro?plan=clinica`) |
 | Secundário | Ver planos | `#precos` |
 | Terciário / Enterprise | Falar com consultor | WhatsApp vendas |
 
-**Checkout fechado: Asaas** (cartão recorrente). Placeholders até existirem os links reais: `CHECKOUT_AUTONOMO_URL`, `CHECKOUT_CLINICA_URL`, `WHATSAPP_VENDAS_URL`. Detalhes em [`checkout.md`](checkout.md).
+**Funil fechado:** trial no app (#163); Asaas só no upgrade autenticado (#134). Placeholders: `APP_SIGNUP_AUTONOMO_URL`, `APP_SIGNUP_CLINICA_URL`, `WHATSAPP_VENDAS_URL`. Detalhes em [`checkout.md`](checkout.md).
 
 ---
 
