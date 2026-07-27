@@ -2,6 +2,7 @@
 
 @source "../index.html";
 @source "../assets/main.js";
+@source "../assets/chat.js";
 
 /* Manrope — display / títulos (latin + latin-ext) */
 @font-face {
@@ -131,6 +132,12 @@
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 639px) {
+  body.chat-panel-open {
+    overflow: hidden;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

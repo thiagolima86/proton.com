@@ -62,8 +62,9 @@ O Worker **não inclui LLM** — só hospeda o código. Quem gera texto é a Ope
 | Campo | Tipo | Notas |
 | --- | --- | --- |
 | `message` | string | texto do lead (máx. ex. 500–1000 chars) |
-| `session_id` | string opcional | UUID no browser para agrupar turnos |
+| `session_id` | string opcional | UUID no browser para agrupar turnos / rate limit |
 | `page` | string opcional | path/âncora (`#precos`) |
+| `history` | array opcional | turnos anteriores `[{ role, content }]` — **contexto da conversa** |
 
 **Resposta:** `{ "reply": "...", "fallback_whatsapp": true|false }`
 
