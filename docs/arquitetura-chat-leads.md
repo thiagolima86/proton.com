@@ -93,13 +93,14 @@ O Worker **não inclui LLM** — só hospeda o código. Quem gera texto é a Ope
 
 | Regra | Detalhe |
 | --- | --- |
-| Fonte da verdade | FAQ / oferta (trial 7 dias, preços pós-trial, planos) |
+| Fonte da verdade | Oferta (`checkout.md`) + dores/benefícios da landing (`ux-landing.md`) |
+| Papel | Vendedor leve da equipe Proton — ajuda a decidir, não só FAQ |
 | Não inventar | Fora da base → WhatsApp |
 | Funil | Chat não substitui CTA (signup trial / consultor) |
-| Tom | Português BR, fisio, curto |
+| Tom | Português BR do dia a dia, fisio, curto; gatilhos honestos, sem pressão |
 | Fallback | WhatsApp vendas |
 
-Grounding fatia 1: FAQ estático no Worker (JSON/Markdown) alinhado a `checkout.md`.
+Grounding fatia 1: system prompt no Worker (espelho em [`chat-worker-setup.md`](chat-worker-setup.md)).
 
 ---
 
