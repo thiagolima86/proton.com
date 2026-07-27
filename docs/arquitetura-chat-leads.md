@@ -1,6 +1,9 @@
 # Arquitetura — Chat de leads com IA (landing)
 
-**Status:** proposta / futuro — **não** implementar enquanto o funil trial (#163) e URLs reais da landing não estiverem estáveis.  
+**Status:** fatia A iniciada — Worker + OpenAI + FAQ mínimo no ar.  
+**Setup e script:** [`chat-worker-setup.md`](chat-worker-setup.md)  
+**Worker:** `https://proton-chat-lead.thiagolima86.workers.dev/`
+
 **Objetivo:** responder dúvidas de leads na landing (preços, trial, planos, o que o Proton faz) sem sair do GitHub Pages e **sem** expor chave OpenAI no front.
 
 **Decisão fechada:** backend do chat = **Cloudflare Worker** (não o Rails do Proton na fatia 1).

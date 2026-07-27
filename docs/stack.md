@@ -136,4 +136,4 @@ proton.com/
 
 ## Futuro (proposta)
 
-- Chat de leads com IA: [`arquitetura-chat-leads.md`](arquitetura-chat-leads.md) — **Cloudflare Worker** + OpenAI (key marketing); Pages só UI.
+- Chat de leads com IA: [`arquitetura-chat-leads.md`](arquitetura-chat-leads.md) — **Cloudflare Worker** + OpenAI (key marketing); Pages só UI. Setup/script: [`chat-worker-setup.md`](chat-worker-setup.md).
