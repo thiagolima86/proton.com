@@ -133,3 +133,7 @@ proton.com/
 - Backend / formulário próprio (conversão self-serve → **signup trial no app**; Personalizado → WhatsApp — ver [`checkout.md`](checkout.md))
 - Analytics pesado (Google Analytics). Se necessário, avaliar Plausible/Umami leves depois
 - Dark mode
+
+## Futuro (proposta)
+
+- Chat de leads com IA na landing: arquitetura em [`arquitetura-chat-leads.md`](arquitetura-chat-leads.md) (API no Proton + OpenAI; Pages só UI).
