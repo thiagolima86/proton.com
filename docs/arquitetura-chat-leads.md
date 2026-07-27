@@ -132,7 +132,7 @@ Ordem sugerida **depois** de: WhatsApp real · `APP_URL` · signup trial (#163) 
 
 | Fatia | Onde | Entrega |
 | --- | --- | --- |
-| A | Cloudflare | Worker `/chat` + secrets + CORS + rate limit + FAQ + OpenAI |
+| A | Cloudflare | Worker `/chat` + secret OpenAI + FAQ mínimo — **feito** (ver [`chat-worker-setup.md`](chat-worker-setup.md)); falta CORS restrito + rate limit + teto diário |
 | B | Landing | Widget apontando para o Worker |
 | C | Cloudflare | Métricas básicas / teto diário / alertas |
 | D | Opcional | Integrar leads no Rails/CRM — só se fizer falta |
