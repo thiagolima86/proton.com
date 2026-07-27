@@ -189,6 +189,7 @@ Includes iguais nos três planos (benefício, não feature de TI). A linha de pr
 
 | Campo | Conteúdo |
 | --- | --- |
+| Badge | 7 dias grátis |
 | Nome | Clínica |
 | Foco | Pequenas clínicas com equipe |
 | Profissionais | **Até 3 profissionais** |
@@ -236,7 +237,7 @@ Quando houver depoimento real (nome + contexto), substitui este bloco — fora d
 | Elemento | Copy fechada |
 | --- | --- |
 | H2 | “Pronto para sair do papel?” |
-| Apoio | “Teste 7 dias grátis no plano Autônomo — sem cartão na entrada.” |
+| Apoio | “Teste 7 dias grátis — Autônomo ou Clínica, sem cartão na entrada.” |
 | CTA primário | **Começar grátis** → `APP_SIGNUP_AUTONOMO_URL` |
 | Link texto | **Falar com consultor** → `WHATSAPP_VENDAS_URL` |
 

@@ -47,8 +47,9 @@ Exibidos na seção de preços como valor **após** o período de teste:
 
 ## Regras de copy (trial)
 
-- Dias **1–7** grátis; no **8º** dia o acesso clínico corta se não assinar — **dados não apagam**
+- Dias **1–7** grátis nos planos **Autônomo e Clínica**; no **8º** dia o acesso clínico corta se não assinar — **dados não apagam**
 - No trial valem os **limites do plano escolhido** (Clínica = até 3 profissionais)
+- Personalizado **não** entra no self-serve trial (WhatsApp / sob consulta)
 - Gancho de aquisição = **trial**, não preço introdutório
 - Evitar “R$ 39,90” na landing como oferta de entrada
 
