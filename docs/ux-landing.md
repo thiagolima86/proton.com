@@ -37,7 +37,7 @@ Sem glow, sem pills em excesso, sem cards decorativos.
 
 - Mobile-first; alvos de toque ≥ 44px; contraste WCAG AA
 - Um CTA primário por dobra
-- CTAs apontam para **links externos** (checkout) ou **WhatsApp**
+- CTAs apontam para **links externos Asaas** (checkout) ou **WhatsApp** (ver [`checkout.md`](checkout.md))
 - Tom: profissional, prático, economia de tempo, facilidade no celular
 - Em 5 segundos: o visitante entende que o Proton é prontuário + gestão para fisio
 
@@ -283,7 +283,7 @@ Escopo para o DEV nesta sessão / run:
 | Secundário | Ver planos | `#precos` |
 | Terciário / Enterprise | Falar com consultor | WhatsApp vendas |
 
-Placeholders de URL até o PO/DEV preencherem: `CHECKOUT_AUTONOMO_URL`, `CHECKOUT_CLINICA_URL`, `WHATSAPP_VENDAS_URL`.
+**Checkout fechado: Asaas** (cartão recorrente). Placeholders até existirem os links reais: `CHECKOUT_AUTONOMO_URL`, `CHECKOUT_CLINICA_URL`, `WHATSAPP_VENDAS_URL`. Detalhes em [`checkout.md`](checkout.md).
 
 ---
 
