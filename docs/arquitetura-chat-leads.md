@@ -1,6 +1,9 @@
 # Arquitetura — Chat de leads com IA (landing)
 
-**Status:** proposta / futuro — **não** implementar enquanto o funil trial (#163) e URLs reais da landing não estiverem estáveis.  
+**Status:** fatia A iniciada — Worker + OpenAI + FAQ mínimo no ar.  
+**Setup e script:** [`chat-worker-setup.md`](chat-worker-setup.md)  
+**Worker:** `https://proton-chat-lead.thiagolima86.workers.dev/`
+
 **Objetivo:** responder dúvidas de leads na landing (preços, trial, planos, o que o Proton faz) sem sair do GitHub Pages e **sem** expor chave OpenAI no front.
 
 **Decisão fechada:** backend do chat = **Cloudflare Worker** (não o Rails do Proton na fatia 1).
@@ -91,13 +94,14 @@ O Worker **não inclui LLM** — só hospeda o código. Quem gera texto é a Ope
 
 | Regra | Detalhe |
 | --- | --- |
-| Fonte da verdade | FAQ / oferta (trial 7 dias, preços pós-trial, planos) |
+| Fonte da verdade | Oferta (`checkout.md`) + dores/benefícios da landing (`ux-landing.md`) |
+| Papel | Vendedor leve da equipe Proton — ajuda a decidir, não só FAQ |
 | Não inventar | Fora da base → WhatsApp |
 | Funil | Chat não substitui CTA (signup trial / consultor) |
-| Tom | Português BR, fisio, curto |
+| Tom | Português BR do dia a dia, fisio, curto; gatilhos honestos, sem pressão |
 | Fallback | WhatsApp vendas |
 
-Grounding fatia 1: FAQ estático no Worker (JSON/Markdown) alinhado a `checkout.md`.
+Grounding fatia 1: system prompt no Worker (espelho em [`chat-worker-setup.md`](chat-worker-setup.md)).
 
 ---
 
@@ -130,7 +134,7 @@ Ordem sugerida **depois** de: WhatsApp real · `APP_URL` · signup trial (#163) 
 
 | Fatia | Onde | Entrega |
 | --- | --- | --- |
-| A | Cloudflare | Worker `/chat` + secrets + CORS + rate limit + FAQ + OpenAI |
+| A | Cloudflare | Worker `/chat` + secret OpenAI + FAQ mínimo — **feito** (ver [`chat-worker-setup.md`](chat-worker-setup.md)); falta CORS restrito + rate limit + teto diário |
 | B | Landing | Widget apontando para o Worker |
 | C | Cloudflare | Métricas básicas / teto diário / alertas |
 | D | Opcional | Integrar leads no Rails/CRM — só se fizer falta |

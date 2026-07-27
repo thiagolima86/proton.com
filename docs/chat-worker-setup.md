@@ -1,6 +1,6 @@
 # Chat de leads — Worker Cloudflare (setup + script)
 
-**Status:** fatia A no ar · fatia B (widget) em andamento.  
+**Status:** fatia A no ar · fatia B (widget) entregue — falta redeploy do Worker com `history`.  
 **Worker:** `https://proton-chat-lead.thiagolima86.workers.dev/`  
 **Endpoint:** `POST /chat`
 
@@ -16,7 +16,7 @@ Código versionado em [`worker/src/index.js`](../worker/src/index.js) (espelho d
 | --- | --- |
 | Worker `proton-chat-lead` | Cloudflare → Workers & Pages |
 | Secret `OPENAI_API_KEY_MARKETING` | Worker → Settings → Variables and Secrets |
-| Script `/chat` + FAQ | Editor do Worker (código abaixo) |
+| Script `/chat` + FAQ comercial | Editor do Worker (código abaixo) |
 | Widget na landing | `index.html` + `assets/chat.js` |
 | Teste manual | ReqBin / `curl` contra `/chat` |
 
@@ -277,7 +277,7 @@ curl -X POST https://proton-chat-lead.thiagolima86.workers.dev/chat \
 | Fatia | Entrega |
 | --- | --- |
 | A (resto) | CORS só no domínio da landing · rate limit · teto diário OpenAI |
-| B (resto) | Deploy do Worker com `history` · commit/push do widget |
+| B (resto) | Redeploy do Worker com `history` |
 | C | Métricas / alertas |
 
 FAQ do `system` deve continuar espelhando [`checkout.md`](checkout.md).
