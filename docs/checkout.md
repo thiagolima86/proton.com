@@ -27,13 +27,13 @@ Landing → escolhe plano → signup no app (trial 7 dias)
 | Clínica | `{APP_URL}/cadastro?plan=clinica` |
 | Personalizado | WhatsApp / sob consulta (sem self-checkout) |
 
-Placeholders na landing até o host do app estar no ar:
+`APP_URL` de produção: `https://proton-web.onrender.com`.
 
-| Placeholder | Destino |
-| --- | --- |
-| `APP_SIGNUP_AUTONOMO_URL` | `{APP_URL}/cadastro?plan=autonomo` |
-| `APP_SIGNUP_CLINICA_URL` | `{APP_URL}/cadastro?plan=clinica` |
-| `WHATSAPP_VENDAS_URL` | Consultor / Personalizado |
+| Placeholder | Destino | Status |
+| --- | --- | --- |
+| `APP_SIGNUP_AUTONOMO_URL` | `https://proton-web.onrender.com/cadastro?plan=autonomo` | ✅ resolvido na landing |
+| `APP_SIGNUP_CLINICA_URL` | `https://proton-web.onrender.com/cadastro?plan=clinica` | ✅ resolvido na landing |
+| `WHATSAPP_VENDAS_URL` | Consultor / Personalizado | ⏳ ainda placeholder (`https://exemplo.invalid/whatsapp`) |
 
 ## Preços recorrentes (depois do trial)
 
@@ -62,6 +62,7 @@ Exibidos na seção de preços como valor **após** o período de teste:
 
 ## Próximo passo (landing)
 
-1. Confirmar `APP_URL` de produção do monólito Rails
-2. Colar `APP_SIGNUP_*` e `WHATSAPP_VENDAS_URL` nos `href` (hoje `https://exemplo.invalid/...`)
-3. Manter alinhamento de copy com #163 / #134 no app
+1. ~~Confirmar `APP_URL` de produção~~ — `https://proton-web.onrender.com` (#163 concluído)
+2. ~~Colar `APP_SIGNUP_*` nos `href`~~ — feito
+3. Colar `WHATSAPP_VENDAS_URL` real quando disponível (hoje `https://exemplo.invalid/whatsapp`)
+4. Manter alinhamento de copy com #163 / #134 no app
