@@ -75,7 +75,7 @@
       if (!hasWelcomed) {
         appendMessage(
           "assistant",
-          "Olá! Posso ajudar com dúvidas sobre planos, trial de 7 dias e o que o Proton faz. Como posso ajudar?",
+          "Olá! Posso ajudar com dúvidas sobre planos, teste de 7 dias e o que o Proton faz. Como posso ajudar?",
           false
         );
         hasWelcomed = true;

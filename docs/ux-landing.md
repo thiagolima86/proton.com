@@ -37,8 +37,8 @@ Sem glow, sem pills em excesso, sem cards decorativos.
 
 - Mobile-first; alvos de toque ≥ 44px; contraste WCAG AA
 - Um CTA primário por dobra
-- CTAs self-serve apontam para **signup no app** (trial 7 dias) ou **WhatsApp** (Personalizado) — ver [`checkout.md`](checkout.md)
-- Pagamento Asaas acontece **dentro do app**, depois do trial — a landing não cria conta via checkout
+- CTAs self-serve apontam para **signup no app** (teste grátis 7 dias) ou **WhatsApp** (Personalizado) — ver [`checkout.md`](checkout.md)
+- Pagamento Asaas acontece **dentro do app**, depois do teste grátis — a landing não cria conta via checkout
 - Tom: profissional, prático, economia de tempo, facilidade no celular
 - Em 5 segundos: o visitante entende que o Proton é prontuário + gestão para fisio
 
@@ -86,7 +86,7 @@ Conteúdo permitido (só isto):
 | CTA secundário | **Ver planos** → `#precos` (ghost/outline) |
 | Visual | Foto full-bleed: fisio usando o Proton no celular durante o atendimento (`assets/img/hero-fisio-celular.png`); overlay navy à esquerda para legibilidade do texto |
 
-Trial (“7 dias grátis · sem cartão”) pode aparecer **só na linha de apoio do CTA**, não como sticker sobre a imagem.
+Teste grátis (“7 dias grátis · sem cartão”) pode aparecer **só na linha de apoio do CTA**, não como sticker sobre a imagem.
 
 ---
 
@@ -182,7 +182,7 @@ Includes iguais nos três planos (benefício, não feature de TI). A linha de pr
 | Foco | Fisio individual — domicílio ou consultório |
 | Profissionais | **1 profissional** |
 | Preço | **R$ 99/mês** |
-| Nota | Depois do trial · sem cartão na entrada · sem fidelidade |
+| Nota | Depois do teste grátis · sem cartão na entrada · sem fidelidade |
 | CTA | **Começar grátis** → `APP_SIGNUP_AUTONOMO_URL` |
 
 #### Bloco B — Clínica / Equipe
@@ -194,7 +194,7 @@ Includes iguais nos três planos (benefício, não feature de TI). A linha de pr
 | Foco | Pequenas clínicas com equipe |
 | Profissionais | **Até 3 profissionais** |
 | Preço | **R$ 169/mês** |
-| Nota | Depois do trial · valor adicional por profissional acima de 3 |
+| Nota | Depois do teste grátis · valor adicional por profissional acima de 3 |
 | CTA | **Começar grátis** → `APP_SIGNUP_CLINICA_URL` |
 
 #### Bloco C — Personalizado / Enterprise
@@ -208,7 +208,7 @@ Includes iguais nos três planos (benefício, não feature de TI). A linha de pr
 | Nota | Condições para a sua operação |
 | CTA | **Falar com consultor** → `WHATSAPP_VENDAS_URL` |
 
-Microcopy sob a grade: “No trial valem os limites do plano. No 8º dia o acesso clínico pausa se não assinar — seus dados ficam salvos. Dúvidas? Fale conosco no WhatsApp.” → `WHATSAPP_VENDAS_URL`.
+Microcopy sob a grade: “No teste grátis valem os limites do plano. No 8º dia o acesso clínico pausa se não assinar — seus dados ficam salvos. Dúvidas? Fale conosco no WhatsApp.” → `WHATSAPP_VENDAS_URL`.
 
 ---
 
@@ -259,7 +259,7 @@ Escopo para o DEV nesta sessão / run:
 
 | Inclui | Não inclui |
 | --- | --- |
-| Alinhar copies e CTAs ao funil trial (#163) | URLs reais de app/WhatsApp (manter placeholders documentados) |
+| Alinhar copies e CTAs ao funil teste grátis (#163) | URLs reais de app/WhatsApp (manter placeholders documentados) |
 | Layout mobile-first das seções 2–7 + footer links | Foto/mockup final do produto (slot + placeholder ok) |
 | Ícones Heroicons inline nas seções Dor, Benefícios, Confiança | Domínio/CNAME, og-image, analytics |
 | Hero e preços sem gancho “R$ 39,90”; CTAs → signup do app | Refatorar nav ou stack |
@@ -285,7 +285,7 @@ Escopo para o DEV nesta sessão / run:
 | Secundário | Ver planos | `#precos` |
 | Terciário / Enterprise | Falar com consultor | WhatsApp vendas |
 
-**Funil fechado:** trial no app (#163); Asaas só no upgrade autenticado (#134). Placeholders: `APP_SIGNUP_AUTONOMO_URL`, `APP_SIGNUP_CLINICA_URL`, `WHATSAPP_VENDAS_URL`. Detalhes em [`checkout.md`](checkout.md).
+**Funil fechado:** teste grátis no app (#163); Asaas só no upgrade autenticado (#134). Placeholders: `APP_SIGNUP_AUTONOMO_URL`, `APP_SIGNUP_CLINICA_URL`, `WHATSAPP_VENDAS_URL`. Detalhes em [`checkout.md`](checkout.md).
 
 ---
 

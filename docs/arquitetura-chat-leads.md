@@ -4,11 +4,11 @@
 **Setup e script:** [`chat-worker-setup.md`](chat-worker-setup.md)  
 **Worker:** `https://proton-chat-lead.thiagolima86.workers.dev/`
 
-**Objetivo:** responder dúvidas de leads na landing (preços, trial, planos, o que o Proton faz) sem sair do GitHub Pages e **sem** expor chave OpenAI no front.
+**Objetivo:** responder dúvidas de leads na landing (preços, teste grátis, planos, o que o Proton faz) sem sair do GitHub Pages e **sem** expor chave OpenAI no front.
 
 **Decisão fechada:** backend do chat = **Cloudflare Worker** (não o Rails do Proton na fatia 1).
 
-Relaciona: [`stack.md`](stack.md) (hospedagem estática) · [`checkout.md`](checkout.md) (funil trial) · app Proton `docs/ia-custos.md` (OpenAI já usada no produto).
+Relaciona: [`stack.md`](stack.md) (hospedagem estática) · [`checkout.md`](checkout.md) (funil teste grátis) · app Proton `docs/ia-custos.md` (OpenAI já usada no produto).
 
 ---
 
@@ -97,7 +97,7 @@ O Worker **não inclui LLM** — só hospeda o código. Quem gera texto é a Ope
 | Fonte da verdade | Oferta (`checkout.md`) + dores/benefícios da landing (`ux-landing.md`) |
 | Papel | Vendedor leve da equipe Proton — ajuda a decidir, não só FAQ |
 | Não inventar | Fora da base → WhatsApp |
-| Funil | Chat não substitui CTA (signup trial / consultor) |
+| Funil | Chat não substitui CTA (signup teste grátis / consultor) |
 | Tom | Português BR do dia a dia, fisio, curto; gatilhos honestos, sem pressão |
 | Fallback | WhatsApp vendas |
 
@@ -130,7 +130,7 @@ Esforço estimado (quando priorizar): **~2–4 dias** (Worker + FAQ + hardening)
 
 ## 7. Fatias de entrega
 
-Ordem sugerida **depois** de: WhatsApp real · `APP_URL` · signup trial (#163) estável.
+Ordem sugerida **depois** de: WhatsApp real · `APP_URL` · signup teste grátis (#163) estável.
 
 | Fatia | Onde | Entrega |
 | --- | --- | --- |
@@ -139,7 +139,7 @@ Ordem sugerida **depois** de: WhatsApp real · `APP_URL` · signup trial (#163) 
 | C | Cloudflare | Métricas básicas / teto diário / alertas |
 | D | Opcional | Integrar leads no Rails/CRM — só se fizer falta |
 
-**Critério de pronto (A+B):** lead pergunta preço/trial e recebe resposta alinhada a `checkout.md`; limite ou dúvida fora do FAQ → WhatsApp; key não aparece no Pages.
+**Critério de pronto (A+B):** lead pergunta preço/teste grátis e recebe resposta alinhada a `checkout.md`; limite ou dúvida fora do FAQ → WhatsApp; key não aparece no Pages.
 
 ---
 
@@ -149,7 +149,7 @@ Ordem sugerida **depois** de: WhatsApp real · `APP_URL` · signup trial (#163) 
 - Chamar OpenAI direto do browser
 - Acoplar o chat às rotas clínicas do Proton nesta fatia
 - Prometer na IA o que o PO não aprovou
-- Substituir o funil trial pelo bot
+- Substituir o funil teste grátis pelo bot
 
 ---
 
