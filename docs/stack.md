@@ -66,7 +66,7 @@ Regras: nada essencial de conteúdo depende de JS (SEO). `defer` no `<script>`.
 - `<html lang="pt-BR">`
 - `title` e `meta description` únicos, com termos do público (prontuário eletrônico, fisioterapeuta)
 - Open Graph (`og:title`, `og:description`, `og:image`, `og:url`) + Twitter card
-- `og:image`: `assets/img/og-image.jpg` (1200×630, JPEG — melhor suporte no WhatsApp). URL absoluta aponta para o domínio oficial da landing, `https://useproton.app/...` (`og:image` / `twitter:image` / `canonical`).
+- `og:image`: `assets/img/og-image.jpg` (1200×630, JPEG — melhor suporte no WhatsApp). URL absoluta aponta para o domínio público `https://useproton.app/...` (ver `CNAME`).
 - `link rel="canonical"`
 - `favicon` (SVG + `.ico` fallback) a partir do símbolo da marca
 - `robots.txt` e `sitemap.xml` na raiz
@@ -130,7 +130,7 @@ proton.com/
 ## Fora do escopo (v1)
 
 - Framework JS (React/Vue), SSG (Astro/Eleventy) — desnecessário para 1 página
-- Backend / formulário próprio (conversão self-serve → **signup trial no app**; Personalizado → WhatsApp — ver [`checkout.md`](checkout.md))
+- Backend / formulário próprio (conversão self-serve → **signup de teste no app**; Personalizado → WhatsApp — ver [`checkout.md`](checkout.md))
 - Analytics pesado (Google Analytics). Se necessário, avaliar Plausible/Umami leves depois
 - Dark mode
 
