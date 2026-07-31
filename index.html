@@ -9,23 +9,108 @@
       content="Prontuário eletrônico inteligente e gestão para fisioterapeutas. Menos papelada, menos faltas, mais tempo no atendimento."
     />
     <link rel="canonical" href="https://proton.com.br/" />
+    <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:url" content="https://proton.com.br/" />
+    <meta property="og:site_name" content="Proton" />
     <meta property="og:title" content="Proton — Prontuário eletrônico para fisioterapeutas" />
     <meta
       property="og:description"
       content="Prontuário eletrônico inteligente e gestão para fisioterapeutas. Menos papelada, menos faltas, mais tempo no atendimento."
     />
-    <meta property="og:image" content="https://www.thiagol.dev/proton.com/assets/img/og-image.jpg" />
+    <meta property="og:image" content="https://proton.com.br/assets/img/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Fisioterapeuta usando o Proton no celular durante o atendimento" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://www.thiagol.dev/proton.com/assets/img/og-image.jpg" />
+    <meta name="twitter:image" content="https://proton.com.br/assets/img/og-image.jpg" />
     <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/manrope-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/source-sans-3-latin-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="assets/app.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Proton",
+        "url": "https://proton.com.br/",
+        "applicationCategory": "MedicalApplication",
+        "operatingSystem": "Web, Android, iOS",
+        "description": "Prontuário eletrônico inteligente e gestão para fisioterapeutas. Menos papelada, menos faltas, mais tempo no atendimento.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Autônomo",
+            "price": "99",
+            "priceCurrency": "BRL",
+            "priceValidUntil": "2026-12-31",
+            "url": "https://proton.com.br/#precos"
+          },
+          {
+            "@type": "Offer",
+            "name": "Clínica",
+            "price": "169",
+            "priceCurrency": "BRL",
+            "priceValidUntil": "2026-12-31",
+            "url": "https://proton.com.br/#precos"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que é o Proton?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Proton é um prontuário eletrônico e sistema de gestão para fisioterapeutas autônomos e clínicas, com evolução por voz, avaliação por fotos com apoio de IA e lembretes automáticos no WhatsApp."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto custa o Proton?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O plano Autônomo custa R$ 99/mês para 1 profissional e o plano Clínica custa R$ 169/mês para até 3 profissionais. Ambos têm 7 dias grátis, sem cartão na entrada."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso de cartão de crédito para testar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O teste de 7 dias não exige cartão na entrada e seus dados ficam salvos mesmo se você não assinar depois."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Proton funciona para atendimento domiciliar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O Proton foi pensado para fisioterapeutas autônomos e domiciliares, permitindo registrar prontuário e evolução direto do celular entre um atendimento e outro."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="font-body bg-slate-50 text-slate-800 antialiased">
     <!-- APP_SIGNUP_AUTONOMO_URL / APP_SIGNUP_CLINICA_URL apontam para https://proton-web.onrender.com/cadastro?plan=...
@@ -44,6 +129,7 @@
         <nav class="hidden items-center gap-8 text-sm font-semibold text-proton-navy md:flex" aria-label="Principal">
           <a href="#beneficios" class="hover:text-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint">Benefícios</a>
           <a href="#precos" class="hover:text-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint">Preços</a>
+          <a href="#faq" class="hover:text-proton-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-proton-mint">FAQ</a>
         </nav>
         <div class="flex items-center gap-3">
           <!-- APP_SIGNUP_AUTONOMO_URL -->
@@ -71,6 +157,7 @@
         <nav class="flex flex-col gap-1 text-sm font-semibold text-proton-navy" aria-label="Mobile">
           <a href="#beneficios" class="min-h-11 px-2 py-3">Benefícios</a>
           <a href="#precos" class="min-h-11 px-2 py-3">Preços</a>
+          <a href="#faq" class="min-h-11 px-2 py-3">FAQ</a>
         </nav>
       </div>
     </header>
@@ -425,6 +512,44 @@
               Evolução por voz e fotos com apoio de IA
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section id="faq" class="reveal bg-white py-16 sm:py-24" aria-labelledby="faq-heading">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <h2 id="faq-heading" class="font-sans text-2xl font-bold text-proton-navy sm:text-3xl">
+            Perguntas frequentes
+          </h2>
+          <dl class="mt-10 space-y-8">
+            <div>
+              <dt class="font-sans font-semibold text-proton-navy">O que é o Proton?</dt>
+              <dd class="mt-1 font-body text-slate-600">
+                Prontuário eletrônico e sistema de gestão para fisioterapeutas autônomos e clínicas, com evolução por
+                voz, avaliação por fotos com apoio de IA e lembretes automáticos no WhatsApp.
+              </dd>
+            </div>
+            <div>
+              <dt class="font-sans font-semibold text-proton-navy">Quanto custa o Proton?</dt>
+              <dd class="mt-1 font-body text-slate-600">
+                O plano Autônomo custa R$ 99/mês para 1 profissional e o plano Clínica custa R$ 169/mês para até 3
+                profissionais. Ambos têm 7 dias grátis, sem cartão na entrada.
+              </dd>
+            </div>
+            <div>
+              <dt class="font-sans font-semibold text-proton-navy">Preciso de cartão de crédito para testar?</dt>
+              <dd class="mt-1 font-body text-slate-600">
+                Não. O teste de 7 dias não exige cartão na entrada e seus dados ficam salvos mesmo se você não
+                assinar depois.
+              </dd>
+            </div>
+            <div>
+              <dt class="font-sans font-semibold text-proton-navy">O Proton funciona para atendimento domiciliar?</dt>
+              <dd class="mt-1 font-body text-slate-600">
+                Sim. O Proton foi pensado para fisioterapeutas autônomos e domiciliares, permitindo registrar
+                prontuário e evolução direto do celular entre um atendimento e outro.
+              </dd>
+            </div>
+          </dl>
         </div>
       </section>
 
