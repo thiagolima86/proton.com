@@ -66,7 +66,7 @@ Regras: nada essencial de conteúdo depende de JS (SEO). `defer` no `<script>`.
 - `<html lang="pt-BR">`
 - `title` e `meta description` únicos, com termos do público (prontuário eletrônico, fisioterapeuta)
 - Open Graph (`og:title`, `og:description`, `og:image`, `og:url`) + Twitter card
-- `og:image`: `assets/img/og-image.jpg` (1200×630, JPEG — melhor suporte no WhatsApp). URL absoluta deve apontar para o host **público atual** (hoje `https://www.thiagol.dev/proton.com/...`). Quando `proton.com.br` estiver no ar, atualizar `og:image` / `twitter:image` / `canonical`.
+- `og:image`: `assets/img/og-image.jpg` (1200×630, JPEG — melhor suporte no WhatsApp). URL absoluta aponta para o domínio público `https://useproton.app/...` (ver `CNAME`).
 - `link rel="canonical"`
 - `favicon` (SVG + `.ico` fallback) a partir do símbolo da marca
 - `robots.txt` e `sitemap.xml` na raiz
