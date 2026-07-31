@@ -23,17 +23,17 @@ Landing → escolhe plano → signup no app (trial 7 dias)
 | --- | --- |
 | Oferta principal | **7 dias grátis** (trial), **sem cartão** na entrada |
 | CTA primário | **Começar grátis** / **Testar 7 dias** → signup no app |
-| Autônomo | `{APP_URL}/cadastro?plan=autonomo` |
-| Clínica | `{APP_URL}/cadastro?plan=clinica` |
+| Autônomo | `https://app.useproton.app/cadastro?plan=autonomo` |
+| Clínica | `https://app.useproton.app/cadastro?plan=clinica` |
 | Personalizado | WhatsApp / sob consulta (sem self-checkout) |
 
-Placeholders na landing até o host do app estar no ar:
+Domínio do app: `https://app.useproton.app` (landing: `https://useproton.app`).
 
 | Placeholder | Destino |
 | --- | --- |
-| `APP_SIGNUP_AUTONOMO_URL` | `{APP_URL}/cadastro?plan=autonomo` |
-| `APP_SIGNUP_CLINICA_URL` | `{APP_URL}/cadastro?plan=clinica` |
-| `WHATSAPP_VENDAS_URL` | Consultor / Personalizado |
+| `APP_SIGNUP_AUTONOMO_URL` | `https://app.useproton.app/cadastro?plan=autonomo` |
+| `APP_SIGNUP_CLINICA_URL` | `https://app.useproton.app/cadastro?plan=clinica` |
+| `WHATSAPP_VENDAS_URL` | Consultor / Personalizado (ainda placeholder) |
 
 ## Preços recorrentes (depois do trial)
 
@@ -62,6 +62,6 @@ Exibidos na seção de preços como valor **após** o período de teste:
 
 ## Próximo passo (landing)
 
-1. Confirmar `APP_URL` de produção do monólito Rails
-2. Colar `APP_SIGNUP_*` e `WHATSAPP_VENDAS_URL` nos `href` (hoje `https://exemplo.invalid/...`)
+1. `APP_URL` de produção definido: `https://app.useproton.app`
+2. `APP_SIGNUP_*` já apontam para `https://app.useproton.app/cadastro?plan=...` nos `href`; falta ainda `WHATSAPP_VENDAS_URL`
 3. Manter alinhamento de copy com #163 / #134 no app

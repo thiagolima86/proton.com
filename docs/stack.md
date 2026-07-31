@@ -66,7 +66,7 @@ Regras: nada essencial de conteúdo depende de JS (SEO). `defer` no `<script>`.
 - `<html lang="pt-BR">`
 - `title` e `meta description` únicos, com termos do público (prontuário eletrônico, fisioterapeuta)
 - Open Graph (`og:title`, `og:description`, `og:image`, `og:url`) + Twitter card
-- `og:image`: `assets/img/og-image.jpg` (1200×630, JPEG — melhor suporte no WhatsApp). URL absoluta deve apontar para o host **público atual** (hoje `https://www.thiagol.dev/proton.com/...`). Quando `proton.com.br` estiver no ar, atualizar `og:image` / `twitter:image` / `canonical`.
+- `og:image`: `assets/img/og-image.jpg` (1200×630, JPEG — melhor suporte no WhatsApp). URL absoluta aponta para o domínio oficial da landing, `https://useproton.app/...` (`og:image` / `twitter:image` / `canonical`).
 - `link rel="canonical"`
 - `favicon` (SVG + `.ico` fallback) a partir do símbolo da marca
 - `robots.txt` e `sitemap.xml` na raiz
@@ -109,7 +109,7 @@ proton.com/
 
 ## Domínio (Registro.br → GitHub Pages)
 
-1. Criar arquivo `CNAME` na raiz com o domínio (ex.: `proton.com.br`).
+1. Criar arquivo `CNAME` na raiz com o domínio (`useproton.app`).
 2. No painel do Registro.br, configurar DNS:
    - **Apex (`@`)**: 4 registros `A` para os IPs do GitHub Pages
      `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`

@@ -28,7 +28,7 @@ Chamar OpenAI **direto do browser** está descartado (key vazaria no DevTools).
 ## 2. Decisão de arquitetura (alvo)
 
 ```
-Visitante (proton.com.br)
+Visitante (useproton.app)
   → widget JS na landing (só UI)
     → HTTPS POST https://chat.<domínio-ou-workers.dev>/chat
       → Cloudflare Worker:
@@ -75,7 +75,7 @@ O Worker **não inclui LLM** — só hospeda o código. Quem gera texto é a Ope
 
 ### Segurança mínima
 
-1. **CORS** allowlist: origem da landing (`https://proton.com.br`, preview Pages se houver)
+1. **CORS** allowlist: origem da landing (`https://useproton.app`, preview Pages se houver)
 2. **Rate limit** por IP + por `session_id` (ex. N msgs/minuto, M/dia) — CF / lógica no Worker
 3. **Teto diário** de chamadas OpenAI (fail closed → WhatsApp)
 4. **Timeout** curto; streaming opcional depois
