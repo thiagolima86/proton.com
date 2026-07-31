@@ -97,7 +97,7 @@ O Worker **não inclui LLM** — só hospeda o código. Quem gera texto é a Ope
 | Fonte da verdade | Oferta (`checkout.md`) + dores/benefícios da landing (`ux-landing.md`) |
 | Papel | Vendedor leve da equipe Proton — ajuda a decidir, não só FAQ |
 | Não inventar | Fora da base → WhatsApp |
-| Funil | Chat não substitui CTA (signup teste grátis / consultor) |
+| Funil | Chat não substitui CTA (signup de teste / consultor) |
 | Tom | Português BR do dia a dia, fisio, curto; gatilhos honestos, sem pressão |
 | Fallback | WhatsApp vendas |
 
@@ -130,7 +130,7 @@ Esforço estimado (quando priorizar): **~2–4 dias** (Worker + FAQ + hardening)
 
 ## 7. Fatias de entrega
 
-Ordem sugerida **depois** de: WhatsApp real · `APP_URL` · signup teste grátis (#163) estável.
+Ordem sugerida **depois** de: WhatsApp real · `APP_URL` · signup de teste (#163) estável.
 
 | Fatia | Onde | Entrega |
 | --- | --- | --- |

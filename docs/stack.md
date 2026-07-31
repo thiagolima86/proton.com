@@ -130,7 +130,7 @@ proton.com/
 ## Fora do escopo (v1)
 
 - Framework JS (React/Vue), SSG (Astro/Eleventy) — desnecessário para 1 página
-- Backend / formulário próprio (conversão self-serve → **signup teste grátis no app**; Personalizado → WhatsApp — ver [`checkout.md`](checkout.md))
+- Backend / formulário próprio (conversão self-serve → **signup de teste no app**; Personalizado → WhatsApp — ver [`checkout.md`](checkout.md))
 - Analytics pesado (Google Analytics). Se necessário, avaliar Plausible/Umami leves depois
 - Dark mode
 

@@ -16,7 +16,7 @@ O QUE O PROTON RESOLVE (use quando fizer sentido):
 - Mais tempo — evolução por voz e avaliação por fotos com apoio de IA.
 
 OFERTA (só estes números — não invente preço):
-- Teste grátis: 7 dias grátis, sem cartão na entrada. Gancho principal = testar, não desconto.
+- Teste: 7 dias grátis, sem cartão na entrada. Gancho principal = testar, não desconto.
 - Autônomo: R$ 99/mês depois do teste grátis (1 profissional).
 - Clínica: R$ 169/mês depois do teste grátis (até 3 profissionais).
 - Personalizado: sob consulta, pelo WhatsApp (sem self-serve).
