@@ -5,12 +5,12 @@ Refs app: [#163](https://github.com/thiagolima86/proton/issues/163) (signup/test
 ## Funil (fechado)
 
 ```
-Landing → escolhe plano → signup no app (teste grátis 7 dias)
+Landing → escolhe plano → signup no app (teste de 7 dias)
   → usa o produto
   → assina dentro do app (Asaas)
 ```
 
-**Pagamento não cria a conta.** Conta nasce no signup teste grátis; Asaas só cobra/upgrade com `account_id` já existente.
+**Pagamento não cria a conta.** Conta nasce no signup de teste; Asaas só cobra/upgrade com `account_id` já existente.
 
 ## O que sai da vitrine
 
@@ -21,7 +21,7 @@ Landing → escolhe plano → signup no app (teste grátis 7 dias)
 
 | Item | Decisão |
 | --- | --- |
-| Oferta principal | **7 dias grátis** (teste grátis), **sem cartão** na entrada |
+| Oferta principal | **7 dias grátis** (teste), **sem cartão** na entrada |
 | CTA primário | **Começar grátis** / **Testar 7 dias** → signup no app |
 | Autônomo | `{APP_URL}/cadastro?plan=autonomo` |
 | Clínica | `{APP_URL}/cadastro?plan=clinica` |

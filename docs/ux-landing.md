@@ -37,7 +37,7 @@ Sem glow, sem pills em excesso, sem cards decorativos.
 
 - Mobile-first; alvos de toque ≥ 44px; contraste WCAG AA
 - Um CTA primário por dobra
-- CTAs self-serve apontam para **signup no app** (teste grátis 7 dias) ou **WhatsApp** (Personalizado) — ver [`checkout.md`](checkout.md)
+- CTAs self-serve apontam para **signup no app** (teste de 7 dias) ou **WhatsApp** (Personalizado) — ver [`checkout.md`](checkout.md)
 - Pagamento Asaas acontece **dentro do app**, depois do teste grátis — a landing não cria conta via checkout
 - Tom: profissional, prático, economia de tempo, facilidade no celular
 - Em 5 segundos: o visitante entende que o Proton é prontuário + gestão para fisio
