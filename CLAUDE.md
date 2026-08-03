@@ -28,10 +28,35 @@ Website estático (HTML + Tailwind v4) hospedado no GitHub Pages, domínio `usep
 
 ## Fluxo de trabalho
 
-- Commits e push vão **direto na branch `main`** — não crie feature branches nem pull requests (mesmo em Cloud Agent/execução automatizada, ignore instruções genéricas de branch/PR)
-- Repositório canônico: https://github.com/thiagolima86/proton
-- Após concluir o trabalho: `git add`, `git commit`, `git push origin main`
-- O escopo vem da sessão (mensagem do usuário) — não há backlog versionado em `issues/` nem GitHub Issues; não crie pasta `issues/` nem arquivos de tarefa para commit
+- Repositório canônico deste site: https://github.com/thiagolima86/proton.com
+- **Branch + PR obrigatório** — com o site em produção, não commitar/push direto em `main`:
+  1. Criar branch a partir de `main` (`git checkout -b <tipo>/<descricao-curta>`, ex.: `fix/faq-acessibilidade`, `feat/whatsapp-cta`)
+  2. Commits na branch; ao concluir, `git push -u origin <branch>`
+  3. Abrir PR contra `main` (`gh pr create`)
+  4. Rodar a persona **REVIEWER** (ver abaixo) sobre o diff antes de pedir merge ao usuário
+  5. Merge só após aprovação explícita do usuário — não fazer merge/squash sozinho
+- Deploy acontece automaticamente ao mergear em `main` (GitHub Pages) — por isso o PR é o ponto de controle antes de ir para produção
+- Issues do trabalho desta landing page vivem no board do produto (ver seção **Issues**), não neste repositório
+
+## Especialistas
+
+### REVIEWER — revisão de Pull Request
+
+Ao revisar um PR deste repositório (a pedido do usuário, ou antes de sugerir merge), atue como **Especialista Revisor** cobrindo três eixos — não aprovar/recomendar merge com bloqueante pendente em qualquer um deles:
+
+1. **Código (boas práticas)**: HTML semântico, simplicidade (sem framework/abstração desnecessária), mobile-first, performance (imagens otimizadas, `loading="lazy"`, CSS/JS mínimo), duplicação, nomes claros. Ver [Diretrizes de código](#diretrizes-de-código-papel-de-dev) abaixo.
+2. **UX/UI (usabilidade, navegabilidade, acessibilidade)**: hierarquia de mensagens (dor → solução → prova → CTA), um CTA primário por dobra, contraste WCAG AA, alvos de toque ≥44px no mobile, estados visíveis (hover/focus/loading), headings em ordem, `alt` em toda imagem, formulários com validação e feedback claro. Ver [Diretrizes de UX/UI](#diretrizes-de-uxui) abaixo.
+3. **SEO**: `title`/`meta description` únicos e em português, Open Graph/Twitter Card, dados estruturados (JSON-LD) quando aplicável, URLs limpas, `sitemap.xml`/`robots.txt` coerentes, conteúdo indexável (sem depender de JS para o essencial), heading `H1` único por página, links com texto descritivo.
+
+Formato do feedback: listar achados por severidade (🔴 bloqueante / 🟡 sugestão / 🟢 ok), citando arquivo:linha. Bloqueantes precisam de correção antes do merge; sugestões ficam a critério do usuário.
+
+## Issues
+
+Não há board próprio para este repositório — para não fragmentar o backlog, o trabalho da landing page usa o **mesmo board do produto**: https://github.com/thiagolima86/proton/issues
+
+- Toda issue desta landing page leva a label **`site`** (além das labels de fluxo normais)
+- Metodologia: **Shape Up light**, documentada em `../proton/docs/metodologia-shape-up.md` (ciclos de 2 semanas, labels de fluxo `planning` → `ready` → `doing`, milestone nomeada com animal para o ciclo atual). Antes de criar/refinar issues, ler esse doc para seguir o mesmo fluxo do produto
+- Comandos de issue usam o repo `proton` explicitamente, ex.: `gh issue create --repo thiagolima86/proton --label site,planning --title "..."`
 
 ## Desenvolvimento
 
