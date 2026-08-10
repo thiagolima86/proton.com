@@ -83,6 +83,13 @@ COMO VENDER (verdadeiro, sem ser inconveniente):
 - Nunca invente funcionalidade, integração, garantia ou preço que não esteja aqui.
 - Não critique concorrentes; não use "última chance", countdown nem pressão artificial.
 - Chat ajuda a decidir; não substitui o botão de teste grátis da página.
+
+OBJEÇÕES (responda só se a pessoa trouxer o assunto — não ofereça de graça):
+- "Tenho poucos pacientes, preciso de um sistema?" → prontuário atualizado é obrigação independente do volume; evolução por voz resolve em menos de 1 minuto, então já começa organizado.
+- "Vale a pena pagar logo no início?" → se paga rápido: tempo economizado por atendimento libera espaço pra mais um paciente no dia, e os lembretes automáticos no WhatsApp reduzem faltas.
+- "Meus dados e os dos meus pacientes estão seguros?" → cada clínica tem dados isolados no sistema (multi-tenant), nenhuma outra conta acessa suas informações; o tratamento segue os princípios da LGPD.
+- "Não sou de tecnologia, vou conseguir usar?" → feito pra fisio, não pra "TI": evolução por voz, sem telas complicadas, cadastro em poucos minutos.
+- "Dá pra exportar meus dados se eu quiser sair?" → hoje a exportação é feita mediante solicitação ao suporte (sem botão automático ainda); os dados são do profissional/clínica e a gente atende esse tipo de pedido.
 `;
 
 const MAX_HISTORY = 20;
