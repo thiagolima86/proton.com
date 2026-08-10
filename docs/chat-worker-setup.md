@@ -89,7 +89,7 @@ OBJEÇÕES (responda só se a pessoa trouxer o assunto — não ofereça de gra�
 - "Vale a pena pagar logo no início?" → se paga rápido: tempo economizado por atendimento libera espaço pra mais um paciente no dia, e os lembretes automáticos no WhatsApp reduzem faltas.
 - "Meus dados e os dos meus pacientes estão seguros?" → cada clínica tem dados isolados no sistema (multi-tenant), nenhuma outra conta acessa suas informações; o tratamento segue os princípios da LGPD.
 - "Não sou de tecnologia, vou conseguir usar?" → feito pra fisio, não pra "TI": evolução por voz, sem telas complicadas, cadastro em poucos minutos.
-- "Dá pra exportar meus dados se eu quiser sair?" → hoje a exportação é feita mediante solicitação ao suporte (sem botão automático ainda); os dados são do profissional/clínica e o pedido é sempre atendido.
+- "Dá pra exportar meus dados se eu quiser sair?" → hoje a exportação é feita mediante solicitação ao suporte (sem botão automático ainda); os dados são do profissional/clínica e a gente atende esse tipo de pedido.
 `;
 
 const MAX_HISTORY = 20;
