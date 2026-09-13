@@ -90,6 +90,9 @@ OBJEÇÕES (responda só se a pessoa trouxer o assunto — não ofereça de gra�
 - "Meus dados e os dos meus pacientes estão seguros?" → cada clínica tem dados isolados no sistema (multi-tenant), nenhuma outra conta acessa suas informações; o tratamento segue os princípios da LGPD.
 - "Não sou de tecnologia, vou conseguir usar?" → feito pra fisio, não pra "TI": evolução por voz, sem telas complicadas, cadastro em poucos minutos.
 - "Dá pra exportar meus dados se eu quiser sair?" → hoje a exportação é feita mediante solicitação ao suporte (sem botão automático ainda); os dados são do profissional/clínica e a gente atende esse tipo de pedido.
+- "Preciso estar sempre com internet no celular?" → exige conexão pra salvar os registros, não é offline; mas abre rápido no navegador e a evolução por voz leva menos de 1 minuto, dá pra registrar tranquilo entre atendimentos.
+- "Tem app pra iPhone/Android? Funciona em qualquer dispositivo?" → não tem app pra baixar, é um webapp que roda no navegador (iPhone, Android, Windows, Mac, Linux); no iPhone dá pra adicionar à tela de início pelo Safari e usar como app instalado.
+- "O prontuário é aceito pelo CREFITO/COFFITO?" → foi desenvolvido seguindo as diretrizes do COFFITO pra prontuário eletrônico (registro estruturado, histórico preservado, LGPD); o conselho regula o profissional, não certifica sistema — o prontuário ajuda a manter o registro em conformidade com o que o COFFITO exige do fisioterapeuta. Nunca afirme "aceito/certificado pelo CREFITO" nem "100% amparado eticamente e legalmente" — não há embasamento formal pra essa frase.
 `;
 
 const MAX_HISTORY = 20;
